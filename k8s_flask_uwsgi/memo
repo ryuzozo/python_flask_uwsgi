@@ -1,0 +1,11 @@
+https://hackmd.io/@moriaki3193/SkJmq3E0r
+
+
+
+・Dockerファイルの場所は変えた
+docker build -t local/k8s-flask-uwsgi:latest -f ./backend/backend.Dockerfile ./backend/
+
+・run
+docker run --rm --name k8s-flask-uwsgi --publish 5000:5000 local/k8s-flask-uwsgi:latest
+
+・pipenvのinstallで手こずった. installしなおしたらあっさり行けた
